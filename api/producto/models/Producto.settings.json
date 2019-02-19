@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "producto",
+  "info": {
+    "name": "producto",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "descripcion": {
+      "default": "",
+      "type": "text"
+    },
+    "preciofinal": {
+      "default": "",
+      "type": "integer"
+    },
+    "precioreferencial": {
+      "default": "",
+      "type": "integer"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "categorias": {
+      "collection": "categoria",
+      "via": "producto"
+    },
+    "marca": {
+      "model": "marca",
+      "via": "producto"
+    }
+  }
+}

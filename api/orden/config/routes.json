@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ordens",
+      "handler": "Orden.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordens/count",
+      "handler": "Orden.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordens/:_id",
+      "handler": "Orden.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ordens",
+      "handler": "Orden.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ordens/:_id",
+      "handler": "Orden.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ordens/:_id",
+      "handler": "Orden.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

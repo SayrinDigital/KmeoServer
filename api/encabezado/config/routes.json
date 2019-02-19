@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/encabezados",
+      "handler": "Encabezado.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/encabezados/count",
+      "handler": "Encabezado.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/encabezados/:_id",
+      "handler": "Encabezado.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/encabezados",
+      "handler": "Encabezado.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/encabezados/:_id",
+      "handler": "Encabezado.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/encabezados/:_id",
+      "handler": "Encabezado.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

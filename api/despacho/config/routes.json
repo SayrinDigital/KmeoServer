@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/despachos",
+      "handler": "Despacho.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/despachos/count",
+      "handler": "Despacho.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/despachos/:_id",
+      "handler": "Despacho.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/despachos",
+      "handler": "Despacho.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/despachos/:_id",
+      "handler": "Despacho.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/despachos/:_id",
+      "handler": "Despacho.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

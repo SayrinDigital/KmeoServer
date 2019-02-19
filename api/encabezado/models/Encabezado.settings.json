@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "encabezado",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "link": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

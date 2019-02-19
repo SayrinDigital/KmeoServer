@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mediospagos",
+      "handler": "Mediospago.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mediospagos/count",
+      "handler": "Mediospago.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mediospagos/:_id",
+      "handler": "Mediospago.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mediospagos",
+      "handler": "Mediospago.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mediospagos/:_id",
+      "handler": "Mediospago.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mediospagos/:_id",
+      "handler": "Mediospago.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

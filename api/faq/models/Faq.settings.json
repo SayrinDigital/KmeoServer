@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "faq",
+  "info": {
+    "name": "faq",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "pregunta": {
+      "default": "",
+      "type": "string"
+    },
+    "respuesta": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

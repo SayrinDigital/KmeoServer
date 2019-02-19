@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "despacho",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "detalles": {
+      "default": "",
+      "type": "text"
+    },
+    "precio": {
+      "default": "",
+      "type": "integer"
+    }
+  }
+}

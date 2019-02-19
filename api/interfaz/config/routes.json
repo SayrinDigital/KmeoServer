@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/interfazs",
+      "handler": "Interfaz.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/interfazs/count",
+      "handler": "Interfaz.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/interfazs/:_id",
+      "handler": "Interfaz.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/interfazs",
+      "handler": "Interfaz.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/interfazs/:_id",
+      "handler": "Interfaz.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/interfazs/:_id",
+      "handler": "Interfaz.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

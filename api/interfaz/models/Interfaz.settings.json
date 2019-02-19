@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "interfaz",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "tituloencabezado": {
+      "default": "",
+      "type": "string"
+    },
+    "descripcion": {
+      "default": "",
+      "type": "text"
+    },
+    "piedescripcion": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

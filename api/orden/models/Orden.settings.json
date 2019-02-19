@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "orden",
+  "info": {
+    "name": "orden",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "email": {
+      "default": "",
+      "type": "email"
+    },
+    "telefono": {
+      "default": "",
+      "type": "string"
+    },
+    "direccion": {
+      "default": "",
+      "type": "string"
+    },
+    "despachorapido": {
+      "default": false,
+      "type": "boolean"
+    },
+    "total": {
+      "default": "",
+      "type": "integer"
+    },
+    "productos": {
+      "default": "",
+      "type": "json"
+    }
+  }
+}

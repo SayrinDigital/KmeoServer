@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "marca",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "producto": {
+      "model": "producto",
+      "via": "marca"
+    }
+  }
+}

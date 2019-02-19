@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "categoria",
+  "info": {
+    "name": "categoria",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "color": {
+      "default": "",
+      "type": "string"
+    },
+    "descripcion": {
+      "default": "",
+      "type": "text"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "producto": {
+      "collection": "producto",
+      "via": "categorias",
+      "dominant": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "mediospago",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "descripcion": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}
