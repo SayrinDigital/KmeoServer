@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Producto.js service
+ * Fotos.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -12,138 +12,114 @@ const _ = require('lodash');
 module.exports = {
 
   /**
-   * Promise to fetch all productos.
+   * Promise to fetch all fotos.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('producto', params);
+    const filters = strapi.utils.models.convertParams('fotos', params);
     // Select field to populate.
-    const populate = Producto.associations
+    const populate = Fotos.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Producto
+    return Fotos
       .find()
       .where(filters.where)
       .sort(filters.sort)
       .skip(filters.start)
       .limit(filters.limit)
-      //.populate(filters.populate || populate);
-      .populate([
-       {
-        path: 'fotos',
-        populate: [
-          {
-            path: 'frontal'
-          },
-          {
-            path: 'extra'
-          }
-        ]
-      }]);
+      .populate(filters.populate || populate);
   },
 
   /**
-   * Promise to fetch a/an producto.
+   * Promise to fetch a/an fotos.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Producto.associations
+    const populate = Fotos.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Producto
-      .findOne(_.pick(params, _.keys(Producto.schema.paths)))
-      //.populate(populate);
-      .populate([
-       {
-        path: 'fotos',
-        populate: [
-          {
-            path: 'frontal'
-          },
-          {
-            path: 'extra'
-          }
-        ]
-      }]);
+    return Fotos
+      .findOne(_.pick(params, _.keys(Fotos.schema.paths)))
+      .populate(populate);
   },
 
   /**
-   * Promise to count productos.
+   * Promise to count fotos.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('producto', params);
+    const filters = strapi.utils.models.convertParams('fotos', params);
 
-    return Producto
+    return Fotos
       .count()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an producto.
+   * Promise to add a/an fotos.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Producto.associations.map(ast => ast.alias));
-    const data = _.omit(values, Producto.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Fotos.associations.map(ast => ast.alias));
+    const data = _.omit(values, Fotos.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Producto.create(data);
+    const entry = await Fotos.create(data);
 
     // Create relational data and return the entry.
-    return Producto.updateRelations({ _id: entry.id, values: relations });
+    return Fotos.updateRelations({ _id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an producto.
+   * Promise to edit a/an fotos.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Producto.associations.map(a => a.alias));
-    const data = _.omit(values, Producto.associations.map(a => a.alias));
+    const relations = _.pick(values, Fotos.associations.map(a => a.alias));
+    const data = _.omit(values, Fotos.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Producto.update(params, data, { multi: true });
+    const entry = await Fotos.update(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Producto.updateRelations(Object.assign(params, { values: relations }));
+    return Fotos.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an producto.
+   * Promise to remove a/an fotos.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Producto.associations
+    const populate = Fotos.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Producto
+    const data = await Fotos
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -152,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Producto.associations.map(async association => {
+      Fotos.associations.map(async association => {
         if (!association.via || !data._id) {
           return true;
         }
@@ -173,22 +149,22 @@ module.exports = {
   },
 
   /**
-   * Promise to search a/an producto.
+   * Promise to search a/an fotos.
    *
    * @return {Promise}
    */
 
   search: async (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('producto', params);
+    const filters = strapi.utils.models.convertParams('fotos', params);
     // Select field to populate.
-    const populate = Producto.associations
+    const populate = Fotos.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    const $or = Object.keys(Producto.attributes).reduce((acc, curr) => {
-      switch (Producto.attributes[curr].type) {
+    const $or = Object.keys(Fotos.attributes).reduce((acc, curr) => {
+      switch (Fotos.attributes[curr].type) {
         case 'integer':
         case 'float':
         case 'decimal':
@@ -212,7 +188,7 @@ module.exports = {
       }
     }, []);
 
-    return Producto
+    return Fotos
       .find({ $or })
       .sort(filters.sort)
       .skip(filters.start)

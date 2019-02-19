@@ -39,7 +39,15 @@ module.exports = {
         path: 'producto',
         populate: [
           {
-            path: 'imagen'
+            path: 'fotos',
+            populate: [
+              {
+                path: 'frontal'
+              },
+              {
+                path: 'extra'
+              }
+            ]
           },
           {
             path: 'marca'
@@ -69,7 +77,15 @@ module.exports = {
         path: 'producto',
         populate: [
           {
-            path: 'imagen'
+            path: 'fotos',
+            populate: [
+              {
+                path: 'frontal'
+              },
+              {
+                path: 'extra'
+              }
+            ]
           },
           {
             path: 'marca'

@@ -25,18 +25,16 @@
       "default": "",
       "type": "integer"
     },
-    "imagen": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
     "categorias": {
       "collection": "categoria",
       "via": "producto"
     },
     "marca": {
       "model": "marca",
+      "via": "producto"
+    },
+    "fotos": {
+      "model": "fotos",
       "via": "producto"
     }
   }

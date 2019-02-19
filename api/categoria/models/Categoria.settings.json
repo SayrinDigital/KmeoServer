@@ -29,8 +29,8 @@
     },
     "producto": {
       "collection": "producto",
-      "via": "categorias",
-      "dominant": true
+      "dominant": true,
+      "via": "categorias"
     }
   }
 }
