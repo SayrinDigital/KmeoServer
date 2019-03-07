@@ -36,6 +36,10 @@
     "fotos": {
       "model": "fotos",
       "via": "producto"
+    },
+    "mostrar": {
+      "default": true,
+      "type": "boolean"
     }
   }
 }

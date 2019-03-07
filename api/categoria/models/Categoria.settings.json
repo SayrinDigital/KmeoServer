@@ -31,6 +31,10 @@
       "collection": "producto",
       "dominant": true,
       "via": "categorias"
+    },
+    "mostrar": {
+      "default": false,
+      "type": "boolean"
     }
   }
 }
