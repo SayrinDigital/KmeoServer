@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "despacho",
   "info": {
     "name": "despacho",
     "description": ""
@@ -16,6 +16,10 @@
     "precio": {
       "default": "",
       "type": "integer"
+    },
+    "mostrar": {
+      "default": true,
+      "type": "boolean"
     }
   }
 }
