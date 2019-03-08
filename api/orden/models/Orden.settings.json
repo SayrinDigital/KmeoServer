@@ -40,6 +40,12 @@
     "estado": {
       "default": "",
       "type": "string"
+    },
+    "voucher": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     }
   }
 }
