@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "encabezado",
   "info": {
     "name": "encabezado",
     "description": ""
@@ -18,6 +18,14 @@
     "link": {
       "default": "",
       "type": "string"
+    },
+    "titulo": {
+      "default": "",
+      "type": "string"
+    },
+    "descripcion": {
+      "default": "",
+      "type": "text"
     }
   }
 }
